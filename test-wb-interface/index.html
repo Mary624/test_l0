@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+<style>
+     .main-form {
+        padding: 6px 10px;
+        background:#009edf;
+        color: #FFF;
+        text-shadow: none;
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+    }
+    .form-control {
+        height: auto!important;
+        padding: 8px 12px !important;
+    }
+    #button {
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        padding: 6px 12px;
+        color: #666;
+        text-shadow: 0 1px #fff;
+        cursor: pointer;
+        border-radius: 3px 3px;
+        box-shadow: 0 1px #fff inset, 0 1px #ddd;
+        background: #f5f5f5;
+        background: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #eeeeee));
+        background: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+        background: -o-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+        background: -ms-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+        background: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
+    }
+	.parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+.inner-right {
+  flex-basis: 250px;
+  flex-grow: 1;
+height: 800px;
+width: 500px;
+}
+</style>
+<script src="script.js"></script>
+<div class="parent">
+    <div class="main-form">
+        <form method="get" onsubmit="return false">
+            <div>
+                <div>
+                    <div>
+                        <span><i aria-hidden="true"></i></span>
+                        <input type="text" name="order_uid" class="form-control" id="order_uid" placeholder="Enter id" required>
+                    </div>
+                </div>
+            </div>
+            <button id="button" onclick="getJSON()">Get info</button>
+        </form>
+    </div>
+	<div class="inner-right">
+        <pre id="result"></pre>
+    </div>
+</div>
+</body>
+</html>
